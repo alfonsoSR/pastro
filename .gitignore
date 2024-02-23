@@ -1,0 +1,15 @@
+# Virtual environments
+venv
+env
+
+# macOS files
+.DS_Store
+
+# Caches
+*cache*
+*.bkp
+*.dtmp
+*.ipynb_checkpoints
+
+# Python packages
+*egg-info*
