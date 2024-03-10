@@ -1,5 +1,8 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = [
+    "setuptools",
+    "wheel"
+]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,31 +10,36 @@ name = "pastro"
 version = "0.1.0"
 description = ""
 authors = [
-  {name = "Alfonso Sánchez Rodríguez", email = "a.sanchezrodriguez@student.tudelft.nl"},
+    { name = "Alfonso Sánchez Rodríguez", email = "a.sanchezrodriguez@student.tudelft.nl" }
 ]
 requires-python = ">=3.10"
 dependencies = [
-	"pyyaml>=6.0",
-	"sgp4>=2.23",
-	"numpy>=1.26",
-	"matplotlib>=3.8.2",
-	"requests>=2.31"	
+    "pyyaml>=6.0",
+    "sgp4>=2.23",
+    "numpy>=1.26",
+    "matplotlib>=3.8.2",
+    "requests>=2.31",
+    "scipy>=1.12"
 ]
 
 [project.optional-dependencies]
 dev = [
-	"pytest>=7.2",
-	"mypy>=0.991",
-	"flake8>=6.0",
-	"autopep8>=2.0"
+    "pytest>=7.2",
+    "mypy>=0.991",
+    "flake8>=6.0",
+    "autopep8>=2.0"
 ]
 
 
 [tool.pytest.ini.options]
-testpaths = ["src/pastro/tests"]
+testpaths = [
+    "src/pastro/tests"
+]
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = [
+    "src"
+]
 
 [tool.mypy]
 mypy_path = "src"
@@ -46,3 +54,11 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
+
+
+[tool.autopep8]
+max_line_length = 79
+ignore = "E501,W6"   # or ["E501", "W6"]
+in-place = true
+recursive = true
+aggressive = 3
